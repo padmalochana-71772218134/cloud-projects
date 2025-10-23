@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="main">
+    <h2>Welcome to Chat</h2>
+
+    <!-- ✅ Username display -->
+    <p>Logged in as: <span id="username" style="font-weight: bold;"></span></p>
+
+    <!-- ✅ Dropdowns for private and group chat -->
+    <div class="dropdowns">
+      <label for="contact-select">Private Chat:</label>
+      <select id="contact-select">
+        <option value="">--Select Contact--</option>
+      </select>
+
+      <label for="group-select">Group Chat:</label>
+      <select id="group-select">
+        <option value="">--Select Group--</option>
+      </select>
+    </div>
+
+    <!-- ✅ Chat title and messages -->
+    <h3 id="chat-title">Select a contact or group to start chatting</h3>
+    <div id="messages" class="chat-box"></div>
+    <div id="typing-indicator" style="color: gray; font-style: italic;"></div>
+
+    <!-- ✅ Message input -->
+    <input type="text" id="message-input" placeholder="Type your message..." />
+    <input type="file" id="media-input" />
+    <button id="send-button">Send</button>
+
+    <hr />
+
+    <!-- ✅ Create group -->
+    <h3>Create Group</h3>
+    <input type="text" id="new-group-name" placeholder="Enter group name" />
+    <button id="create-group-btn">Create Group</button>
+
+    <!-- ✅ Logout -->
+    <button id="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- ✅ Load Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- ✅ Load your chat logic -->
+  <script type="module" src="chat.js"></script>
+</body>
+</html>

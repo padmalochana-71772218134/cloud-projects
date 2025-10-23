@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email" />
+    <input type="password" id="login-password" placeholder="Password" />
+    <button id="btn-login">Login</button>
+    <p id="login-error" class="error"></p>
+    <p>New user? <a href="register.html">Register here</a></p>
+  </div>
+  <!-- Load Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Then your custom Supabase client definition -->
+<script src="chat.js"></script>
+
+<!-- Then any custom JS file using supabase -->
+<script src="auth.js"></script>
+
+</body>
+</html>
