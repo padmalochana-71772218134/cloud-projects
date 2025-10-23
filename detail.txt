@@ -1,6 +1,83 @@
+Here’s a professional and clean **GitHub README project description** for your current chat app, covering only the **available features** and structure:
 
-import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = 'https://ygdbrmwobrkrzgohemmv.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlnZGJybXdvYnJrcnpnb2hlbW12Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQwMzg3MTAsImV4cCI6MjA2OTYxNDcxMH0.oXfWBKJG5rJsyGk2_ak5ueCBIiWOONiRvhXqqQJsSo4
+---
+
+# 📦 Cloud Chat Lite
+
+**Cloud Chat Lite** is a real-time private chat application built with **HTML**, **CSS**, **JavaScript**, and **Supabase**. It supports user authentication, profile management, contact listing, file sharing, and private messaging between users.
+
+---
+
+## ✅ Features
+
+### 🔐 Authentication
+
+* Email/password-based **user registration** and **login**.
+* **Session management** using Supabase's built-in auth system.
+* **Logout** support to safely end sessions.
+
+### 👤 User Profile
+
+* Each user has a profile with:
+
+  * **Username**
+  * **Avatar URL**
+* Profile is automatically created in the database on first login.
+* Users can update their display name and avatar.
+
+### 📇 Contact List
+
+* Shows all **other registered users** except the currently logged-in user.
+* Selecting a contact opens a dedicated **private chat**.
+
+### 💬 Private Messaging
+
+* 1-on-1 text messaging between users.
+* Attach and send **files (images, docs, etc.)** via Supabase Storage.
+* Messages display:
+
+  * **Who sent it** ("You" vs. "Them")
+  * **Text**
+  * **Clickable download links** for file attachments.
+
+---
+
+## 📁 Project Structure
+
+```bash
+cloud-chat-lite/
+├── index.html           # Main UI (login, register, profile, chat)
+├── style.css            # Basic styling        # Handles profile updates
+├── chat.js              # Chat logic, contacts, messages, file uploads   # Supabase initialization
+├── README.md            # Project documentation
+└── assets/              # Optional images or avatars (if used)
+```
+
+---
+
+## 🧰 Tech Stack
+
+* **Frontend**: HTML, CSS, Vanilla JavaScript
+* **Backend (BaaS)**: [Supabase](https://supabase.com/)
+
+  * Authentication
+  * Realtime Database
+  * Storage (for files)
+
+---
+
+## 🛠 Setup Instructions
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/cloud-chat-lite.git
+   ```
+
+2. Open `supabaseClient.js` and set your `supabaseUrl` and `supabaseKey`.
+
+3. Open `index.html` in your browser. You’re ready to chat!
+
+---
+
+Let me know if you’d like a ZIP export, GitHub-ready repo, or to start on a README section for installation, RLS, or live demo.
